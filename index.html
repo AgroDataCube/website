@@ -11,30 +11,32 @@
 <img src="../images/logo_color_rgb.jpg" width="300" alt="Welcome to AgroDataCube"/>
 <br/>
 <h3>A Big Open Data collection for Agri-Food Applications</h3>
-Click for <a href="https://documenter.getpostman.com/view/3862510/RVnSHh76" alt="Postman Doc">Postman</a> documentation or view the <a href="https://agrodatacube.wur.nl/api/v1/rest/swagger.json" alt="Swagger API">Swagger API (JSON)</a> directly.
 </center>
+
+<p>AgroDataCube provides a large collection of both open data and derived data for use in agri-food applications. It is a work in progress, feel free to join our community on <a href="https://github.com/AgroDataCube">GitHub</a> and the <a href="https://gitter.im/agrodatacube/Community">Gitter</a> channel. The API documentation is available here in <a href="https://documenter.getpostman.com/view/3862510/RVnSHh76" alt="Postman Doc">Postman</a>.
+</p>
+
 <br/>
+
 <div style="background-color: #f8f6fb; color: #004c6d; padding: 10px; max-width: 650px; margin-right: auto; margin-left: auto;">
 <p><b>For example:</b></p>
 <p><code>
 <a href="http://agrodatacube.wur.nl/api/v1/rest/fields?geometry=POLYGON%20((4.2%2052,%204.2%2053,%204.3%2053,%204.3%2052,%204.2%2052))&epsg=4326&year=2017&cropname=mais&output_epsg=4326">
 https://agrodatacube.wur.nl/api/v1/rest/fields?geometry=POLYGON((4.2 52.0, 4.2 53.0, 4.3 53.0, 4.3 52.0, 4.2 52.0))&epsg=4326&year=2017&cropname=mais&output_epsg=4326
 </a></code></p>
-<p>Will return all crop fields where maize was grown in 2017, within the specified area. This area is given as a <a href="https://en.wikipedia.org/wiki/Well-known_text" alt="Well-Known Text">WKT</a> POLYGON geometry, with (long lat) coordinates. The epsg and output_epsg indicate the input and output map coordinate systems to use, <a href="http://epsg.io/4326">epsg 4326</a> is the code for WGS 84, the coordinate system used in GPS. The default coordinate system used by the AgroDataCube is epsg 28992, the Dutch Amersfoort / RD New system. Data will be returned in <a href="http://geojson.org" alt="GeoJSON">GeoJSON</a> format, and you can used paging parameters to request more data. Please see the Postman documentation for other available data types and their requests.</p>
+<p>Will return all crop fields where maize was grown in 2017, within the specified area. This area is given as a <a href="https://en.wikipedia.org/wiki/Well-known_text" alt="Well-Known Text">WKT</a> POLYGON geometry, with (long lat) coordinates. The epsg and output_epsg indicate the input and output map coordinate systems to use, <a href="http://epsg.io/4326">epsg 4326</a> is the code for WGS 84, the coordinate system used in GPS. The default coordinate system used by the AgroDataCube is epsg 28992, the Dutch Amersfoort / RD New system. Data will be returned in <a href="http://geojson.org" alt="GeoJSON">GeoJSON</a> format, and you can used paging parameters to request more data. The <a href="https://documenter.getpostman.com/view/3862510/RVnSHh76" alt="Postman Doc">Postman documentation</a> has all the information about available data, and the requests and parameters for retrieving them.</p>
+<p>Please note that you need a token and provide it as a HTTP header parameter in the GET request for it to work. See below for details on how to <a href="https://agrodatacube.wur.nl/api/register.jsp" _target="blank">request a token</a>. HTTP header parameters can typically be set from any programming language, apps for sending web requests, or e.g. Firefox and Chrome browser extensions.</p>
 </div>
 <br/>
-<p>AgroDataCube provides a large collection of both open data and derived data for use in agri-food applications. It is a work in progress, feel free to join our community on <a href="https://github.com/AgroDataCube">GitHub</a> and this <a href="https://gitter.im/agrodatacube/Community">Gitter</a> channel.</p>
 <p><b>License</b></p>
 <p>This work is published under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA</a> license. Open Data has been collected from the Dutch government and Rijkswaterstaat (<a href="https://www.pdok.nl/">PDOK</a>), <a href="https://data.knmi.nl/">KNMI</a>, and Wageningen University.</p>
 <p><b>Usage</b></p>
 <p>NOTE: AS OF MAY 5th 2018, WE ARE CHANGING OUR TOKEN POLICY, REQUIRING A ONE TIME REGISTRATION BY EMAIL IN ORDER FOR US TO TRACK 
 AND ENSURE FAIR USAGE. Request your token here: <a href="https://agrodatacube.wur.nl/api/register.jsp" _target="blank">online</a>. Data in the
  AgroDataCube is free of charge following the license above. For different types of commercial use predefined licenses are available and 
- can be requested <a href="mailto:info.agrodatacube@wur.nl?subject="Request predefined commercial license">here</a>. These commercial licenses support our development and maintenance 
+ can be requested <a href="mailto:info.agrodatacube@wur.nl?subject="Request predefined commercial license"">here</a>. These commercial licenses support our development and maintenance 
  and thus the continued improvement of the AgroDataCube for you as a user. 
 </p>
-<p><b>Fair Access Policy</b></p>
-<p>Use of this Web site and the API is measured and a fair access policy will be applied when needed. No privacy sensitive data is recorded and/or stored.</p>
 <p><b>Disclaimer</b></p>
 <p>Wageningen Environmental Research (WENR) provides this Web site and API as a service to the public.</p>
 <p>WENR is not responsible for, and expressly disclaims all liability for, damages of any kind arising out of use, reference to, or reliance on any information contained within the site. While the information contained within the site is periodically updated, no guarantee is given that the information provided in this Web site is correct, complete, and up-to-date.</p>
